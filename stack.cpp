@@ -99,6 +99,11 @@ public:
         {
             cout<<"Your stack is Empty\n";
         }
+        else
+        {
+            pos=arr[top];
+            return pos;
+        }
     }
 };
 
