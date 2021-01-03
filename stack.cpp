@@ -93,6 +93,13 @@ public:
             arr[top]=var;
         }
     }
+    int peek(int pos)
+    {
+        if(isEmpty())
+        {
+            cout<<"Your stack is Empty\n";
+        }
+    }
 };
 
 
