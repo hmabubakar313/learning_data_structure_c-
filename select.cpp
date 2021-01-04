@@ -1,42 +1,32 @@
-#include<iostream>
- 
-using namespace std;
- 
-int main()
-{
-    int i,j,n,loc,temp,min,a[30];
-    cout<<"Enter the number of elements:";
-    cin>>n;
-    cout<<"\nEnter the elements\n";
- 
-    for(i=0;i<n;i++)
-    {
-        cin>>a[i];
-    }
- 
-    for(i=0;i<n-1;i++)
-    {
-        min=a[i];
-        loc=i;
-        for(j=i+1;j<n;j++)
-        {
-            if(min>a[j])
-            {
-                min=a[j];
-                loc=j;
-            }
-        }
- 
-        temp=a[i];
-        a[i]=a[loc];
-        a[loc]=temp;
-    }
- 
-    cout<<"\nSorted list is as follows\n";
-    for(i=0;i<n;i++)
-    {
-        cout<<a[i]<<" ";
-    }
- 
-    return 0;
+#include<iostream>  
+#include<ctime>
+#include<cstdlib>
+using namespace std;  
+int main ()  
+{    
+    int myarray[20],random ;   
+        srand((unsigned)time(0));
+    cout<<"\nInput list is \n";
+    for(int i=0;i<20;i++)  
+    {  
+        	random = (rand() % 20) + 1;
+        myarray[i]=(rand()%100)+1; 
+        cout<<myarray[i]<<" ";  
+    }    
+    for(int k=1; k<20; k++)   
+    {  
+        int temp = myarray[k];  
+        int j= k-1;  
+        while(j>=0 && temp <= myarray[j])  
+        {  
+            myarray[j+1] = myarray[j];   
+            j = j-1;  
+        }  
+        myarray[j+1] = temp;  
+    }  
+    cout<<"\nSorted list is \n";
+    for(int i=0;i<20;i++)  
+    {  
+        cout <<myarray[i]<<"\t";  
+    }  
 }

@@ -12,9 +12,9 @@ int main()
 	
     for(i=0;i<n;i++)
     {   
-        random = (rand() % 20) + 1;
+		random = (rand() % 20) + 1;
         a[i]=(rand()%100)+1; 
-        cout<<a[i]<<" ";
+        cout<<a[i]<<" ";  
     }
     cout<<endl;
 		
